@@ -1,0 +1,37 @@
+<div class="mat-d-flex mat-flex-column mat-align-items-center">
+  <span class="mat-text-lg mat-mb-4">Sign In</span>
+
+  <div class="mat-mb-4">
+    <mat-form-field>
+      <mat-label>Nombre</mat-label>
+      <input type="text" matInput placeholder="Nombre Completo" [(ngModel)]="name">
+    </mat-form-field>
+  </div>
+
+  <div class="mat-mb-4">
+    <mat-form-field>
+      <mat-label>Usuario</mat-label>
+      <input type="text" matInput placeholder="Nombre de Usuario" [(ngModel)]="username">
+    </mat-form-field>
+  </div>
+
+  <div class="mat-mb-4">
+    <mat-form-field>
+      <mat-label>Contraseña</mat-label>
+      <input type="password" matInput placeholder="Contraseña" [(ngModel)]="password">
+    </mat-form-field>
+  </div>
+
+
+
+  <button mat-button mat-flat-button color="primary" (click)="onRegister()" class="mat-mb-4" style="width: 100%;">
+    <mat-icon>save</mat-icon>
+    Ingresar
+  </button>
+
+  <div class="mat-flex mat-mt-5">
+    <a routerLink="/auth/login">¿Ya tienes cuenta?</a>
+  </div>
+  
+</div>
+

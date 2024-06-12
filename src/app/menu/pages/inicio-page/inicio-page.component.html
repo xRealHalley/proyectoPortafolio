@@ -1,0 +1,46 @@
+<div class="wrapper">
+  <div class="container">
+    <h1>Emma Li Merino León</h1>
+    <h2>Portafolio de Angular</h2>
+  </div>
+  <div class="inicio-page"></div>
+</div>
+
+<div class="contenedor mt-5 mr-5 ml-5 mb-5">
+
+  <div class="info-sections">
+
+    <div class="info-1" id="personal">
+      <h2>Información Personal</h2>
+      <p> {{ infoPersonal.name }} </p>
+      <p> {{ infoPersonal.mail }} </p>
+      <p> {{ infoPersonal.phone }} </p>
+      <p> {{ infoPersonal.details }} </p>
+    </div>
+
+    <div class="info-2" id="estudios">
+      <h2> Estudios y Formación </h2>
+      <div *ngFor="let infoFormacion of infoFormacion">
+        <p> <strong> {{ infoFormacion.estudio }} </strong> </p>
+        <p> {{ infoFormacion.lugar }} </p>
+        <p> {{ infoFormacion.fecha }} </p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="contenedor mt-5 mr-5 ml-5 mb-5">
+  <div class="info-sections-2">
+    <div class="info-3" id="cursos">
+      <h2> Cursos Realizados </h2>
+      <div class="info-cursos-container">
+        <div class="info-cursos" *ngFor="let infoCursos of infoCursos">
+          <p> <strong> {{ infoCursos.nombre }} </strong></p>
+          <p> {{ infoCursos.curso }} </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

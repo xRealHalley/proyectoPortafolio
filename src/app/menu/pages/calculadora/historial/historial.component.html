@@ -1,0 +1,9 @@
+<mat-card class="bg-dark text-light" id="scroll">
+  <mat-card-title class="mr-2 mt-2">
+    <mat-icon>history</mat-icon> Historial
+  </mat-card-title>
+  <mat-card-content class="scroll" #scrollContainer>
+    <p *ngFor="let operation of historyList">{{ operation }}</p>
+  </mat-card-content>
+</mat-card>
+<button mat-raised-button color="warn" class="mt-2" (click)="clearHistory()">Limpiar Historial</button>

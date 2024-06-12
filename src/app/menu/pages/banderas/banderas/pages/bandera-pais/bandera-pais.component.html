@@ -1,0 +1,21 @@
+<h2>Bandera Pais</h2>
+<hr>
+
+<div class="mat-2">
+  <div class="mat-1">
+    <shared-search-box
+      (onDebounce)="searchBanderaPais($event)"
+      [initialValue]="initialValue"
+      placeholder="Buscar pais para encontrar Bandera">
+    </shared-search-box>
+
+    <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+  </div>
+</div>
+
+<div class="mat-2">
+  <div class="mat-1">
+    <hr>
+    <map-table [countries]="countries"></map-table>
+  </div>
+</div>

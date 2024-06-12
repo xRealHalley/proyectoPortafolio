@@ -1,0 +1,11 @@
+table.mat-table {
+  width: 100%;
+}
+
+table.mat-table td {
+  text-align: center;
+}
+
+table.mat-table img {
+  width: 25px;
+}

@@ -1,0 +1,62 @@
+h1 {
+  font-weight: 500;
+}
+.container input {
+  background: black;
+  color: white;
+  height: 50px;
+  border-radius: 10px;
+  margin: 2px;
+  font-size: xx-large;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#igual {
+  grid-column: span 2;
+}
+
+.container input:hover {
+  background: violet;
+  font-weight: bold;
+}
+
+.full {
+  border: 10px solid pink;
+  margin: 2px;
+  padding: 12px;
+  border-radius: 20px;
+  background-image: url('../../../../assets/images/fondo-calculadora.jpg');
+}
+
+input[type="text"] {
+  color: white;
+  text-align: right;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.grid-container input[type="button"] {
+  width: calc(100% + 10px );
+  height: 100%;
+  padding: 10px;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .full {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .calculator-section, .history-section {
+    flex-basis: 48%;
+  }
+}
+

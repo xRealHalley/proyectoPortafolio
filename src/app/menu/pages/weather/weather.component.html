@@ -1,0 +1,96 @@
+<div class="weather-container mt-5 ml-5 mr-5">
+
+  <h2>Buscador del Tiempo</h2>
+  <mat-form-field appearance="fill">
+    <input matInput placeholder="Introduce una ciudad" [(ngModel)]="location" (keydown.enter)="loadWeatherData()">
+  </mat-form-field>
+  <button class="ml-4" mat-raised-button color="primary" (click)="loadWeatherData()">
+    Buscar<mat-icon>search</mat-icon>
+  </button>
+
+</div>
+<div class="weather-resultados" *ngIf="weatherData">
+
+  <mat-card class="weather-card">
+    <mat-card-content class="mt-2">
+      <mat-icon>device_thermostat</mat-icon>
+      <p>
+        <strong>Temperatura: </strong> {{ weatherData.temperature }} °C
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+
+  <mat-card class="weather-card">
+    <mat-card-content class="mt-2">
+      <mat-icon>opacity</mat-icon>
+      <p>
+        <strong>Humedad: </strong> {{ weatherData.humidity }} %
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="weather-card">
+    <mat-card-content  class="mt-2">
+      <mat-icon>air</mat-icon>
+      <p>
+        <strong>Velocidad del viento: </strong> {{ weatherData.windSpeed }} km/h
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<!-- <div class="weather-container">
+  <mat-card class="weather-card">
+    <mat-card-header>
+      <div mat-card-avatar class="weather-header-image"></div>
+      <mat-card-title>Tiempo de Hoy</mat-card-title>
+    </mat-card-header>
+
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Introduce una ciudad" [(ngModel)]="location" (keydown.enter)="loadWeatherData()">
+    </mat-form-field>
+
+    <mat-card-content *ngIf="!weatherData">
+      <p class="mt-2">Cargando información del tiempo..</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <span class="spacer"></span>
+
+      <button mat-button (click)="loadWeatherData()">
+        Buscar <mat-icon>search</mat-icon>
+      </button>
+    </mat-card-actions>
+
+  </mat-card>
+</div>
+
+<div class="resultados" *ngIf="weatherData">
+
+  <mat-card class="results">
+    <mat-card-content class="mt-2">
+      <p>
+        <strong>Temperatura: </strong> {{ weatherData.temperature }} °C
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+
+  <mat-card class="results">
+    <mat-card-content class="mt-2">
+      <p>
+        <strong>Humedad: </strong> {{ weatherData.humidity }} %
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="results">
+    <mat-card-content  class="mt-2">
+      <p>
+        <strong>Velocidad del viento: </strong> {{ weatherData.windSpeed }} km/h
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+</div> -->

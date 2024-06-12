@@ -1,0 +1,24 @@
+<h2>Por Región</h2>
+<hr>
+
+<div class="mat-2 mt-4">
+  <div class="mat-1">
+
+    <button mat-button *ngFor="let region of regions"
+     class="mx-2 mb-3" color="primary"
+     [ngClass]="{ 'mat-button': selectedRegion === region }"
+     (click)="searchByRegion( region )">
+      {{ region }}
+    </button>
+
+    <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+
+  </div>
+</div>
+
+<div class="mat-2 mt-2">
+  <div class="mat-1">
+    <hr>
+    <countries-table [countries]="countries"></countries-table>
+  </div>
+</div>

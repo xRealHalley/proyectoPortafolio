@@ -1,0 +1,47 @@
+<div class="container mr-5 ml-5">
+  <h1 class="text-center text-dark mt-3">
+    <mat-icon>calculate</mat-icon>
+    Tarea Calculadora
+  </h1>
+
+  <div class="bg-dark full">
+    <!-- Calculadora -->
+    <div class="calculator-section mt-2 mb-2">
+      <div>
+        <div class="input-group mb-3">
+          <input matInput type="text" [(ngModel)]="display" aria-label="Text input">
+        </div>
+      </div>
+      <div class="container text-center">
+        <b class="d-inline-block">
+          <div class="grid-container">
+            <button mat-raised-button (click)="deleteLastDigit()">DE</button>
+            <button mat-raised-button (click)="clear()">C</button>
+            <button mat-raised-button (click)="enterValue('.')">.</button>
+            <button mat-raised-button (click)="enterValue('/')">/</button>
+            <button mat-raised-button (click)="enterValue('7')">7</button>
+            <button mat-raised-button (click)="enterValue('8')">8</button>
+            <button mat-raised-button (click)="enterValue('9')">9</button>
+            <button mat-raised-button (click)="enterValue('*')">*</button>
+            <button mat-raised-button (click)="enterValue('4')">4</button>
+            <button mat-raised-button (click)="enterValue('5')">5</button>
+            <button mat-raised-button (click)="enterValue('6')">6</button>
+            <button mat-raised-button (click)="enterValue('-')">-</button>
+            <button mat-raised-button (click)="enterValue('1')">1</button>
+            <button mat-raised-button (click)="enterValue('2')">2</button>
+            <button mat-raised-button (click)="enterValue('3')">3</button>
+            <button mat-raised-button (click)="enterValue('+')">+</button>
+            <button mat-raised-button (click)="enterValue('0')">0</button>
+            <button mat-raised-button (click)="enterValue('00')">00</button>
+            <button id="igual" mat-raised-button (click)="result()">=</button>
+          </div>
+        </b>
+      </div>
+    </div>
+
+    <!-- Historial -->
+    <div class="history-section">
+      <app-historial></app-historial>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.weather-container {
+  width: 100%;
+}
+
+.weather-resultados {
+  display: flex;
+  width: 100%;
+}
+
+ .weather-card {
+  width: 30%;
+  margin: 20px;
+}
+
+/*
+.weather-header-image {
+  background-image: url('../../../../assets/images/soleado.jpg');
+  background-size: cover;
+}
+
+.resultados {
+  display: flex;
+  justify-content: center;
+}
+
+.results {
+
+  margin: 20px;
+
+} */

@@ -1,0 +1,110 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow-y: auto;
+  margin: 0;
+}
+
+.container {
+  background-color: black;
+  color: white;
+  width: 25%;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inicio-page {
+  background-image: url('../../../../assets/images/sakura.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 75%;
+  margin: 0;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 40px;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+p {
+  font-family: 'Arial', sans-serif;
+  color: #666;
+  line-height: 1.5;
+  margin: 10px 40px 5px 40px;
+}
+
+strong {
+  color: #333;
+}
+
+.info-sections {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.info-sections-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.info-1, .info-2 {
+  width: 48%;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-3 {
+  width: 96%;
+  padding: 20px;
+  margin: 10px;
+  box-sizing: border-box;
+  border-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-3 h2 {
+  margin-bottom: 20px;
+}
+
+.info-cursos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.info-1, .info-2, .info-3, .info-cursos {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-1:hover, .info-2:hover, .info-cursos:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,21 @@
+.scroll {
+  height: 250px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+mat-card {
+  margin-top: 22px;
+  background: black;
+  border-radius: 10px;
+  border: 2px solid white;
+  text-align: right;
+}
+
+mat-card-title {
+  color: white;
+}
+
+mat-card-content p {
+  color: white;
+}

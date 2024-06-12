@@ -1,0 +1,29 @@
+<div class="lista-tareas-container mt-5 ml-5 mr-5">
+    <h2>Lista de Tareas</h2>
+    <mat-form-field appearance="fill">
+      <input matInput type="text" [(ngModel)]="nuevaTarea" placeholder="Nueva tarea">
+    </mat-form-field>
+    <button class="ml-4" mat-raised-button color="primary" (click)="agregarTarea()">Agregar Tarea</button>
+
+
+  <div class="lista-tareas">
+    <div class="tareas-por-hacer pb-3">
+      <h3 class="pt-2"> POR HACER </h3>
+      <mat-card *ngFor="let tarea of tareasPorHacer; let i = index" class="tarea-item">
+        <span>{{ tarea.tarea }}</span>
+        <mat-checkbox class="pt-2" [(ngModel)]="tarea.completada" (change)="marcarComoCompletada(i)"></mat-checkbox>
+
+      </mat-card>
+    </div>
+
+    <div class="tareas-completadas pb-3">
+      <h3 class="pt-2"> COMPLETADAS </h3>
+        <mat-card *ngFor="let tarea of tareasCompletadas; let i = index" class="tarea-item">
+        <span>{{ tarea.tarea }}</span>
+        <button mat-icon-button color="warn" (click)="borrarTarea(i, true)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card>
+    </div>
+  </div>
+</div>

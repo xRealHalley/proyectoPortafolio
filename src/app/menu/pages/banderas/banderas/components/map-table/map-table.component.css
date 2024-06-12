@@ -1,0 +1,32 @@
+.no-countries {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  mat-card {
+    background-color: #ffcccb;
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.country-card {
+  flex: 1 1 calc(25% - 1rem);
+  max-width: calc(25% - 1rem);
+  margin: 0.5rem;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  h5 {
+    text-align: center;
+  }
+}
